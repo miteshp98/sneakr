@@ -1,0 +1,25 @@
+.products__card {
+    text-decoration: none;
+    width: 100%;
+    max-width: 400px;
+}
+
+.products__img {
+    width: 100%;
+}
+
+.products__details {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+}
+
+.products__name {
+    font-size: 1.2em;
+}
+
+.products__price {
+    font-size: 1.15em;
+}
