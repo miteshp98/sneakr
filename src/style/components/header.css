@@ -1,0 +1,109 @@
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    z-index: 10;
+}
+
+.header__container {
+    width: 98%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 15px;
+
+    max-width: var(--CON-WIDTH);
+    margin: 0 auto;
+
+    color: black;
+}
+
+.header__brand {
+    flex-grow: 1;
+}
+
+.header__logo {
+    font-weight: 900;
+    font-size: 1.4em;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+
+    span {
+        font-weight: normal;
+    }
+}
+
+.header__nav {
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.header__nav-list {
+    padding: 1.5rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.header__nav-link {
+    color: black;
+    text-decoration: none;
+    vertical-align: top;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+}
+
+.header__cart-btn,
+.header__nav-btn {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.header__nav-btn {
+    i {
+        font-size: 1.2em;
+    }
+}
+
+.header__nav--expand {
+    height: 185px;
+}
+
+@media screen and (min-width: 1024px) {
+    .header__nav {
+        height: auto;
+        position: static;
+        background-color: transparent;
+    }
+
+    .header__nav-list {
+        padding: 0;
+        flex-direction: row;
+        gap: 3rem;
+        justify-content: center;
+    }
+
+    .header__nav-link {
+        font-size: 0.95em;
+    }
+
+    .header__nav-btn {
+        display: none;
+    }
+}
