@@ -1,0 +1,196 @@
+.hero {
+    position: relative;
+    height: 100%;
+    min-height: 80dvh;
+    background: url("https://ucarecdn.com/289b3d4e-6b54-43e9-b9a1-403ff8101ace/-/resize/1440x800/")
+        no-repeat;
+    background-size: cover;
+    background-position: center left;
+    padding: 5rem 1rem;
+}
+
+.hero__container {
+    max-width: var(--CON-WIDTH);
+    margin: 0 auto;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero__title {
+    margin-block: 1rem;
+    font-size: 5em;
+    line-height: 75px;
+}
+
+.hero__description {
+    max-width: 500px;
+    font-size: 0.9em;
+    line-height: 25px;
+    letter-spacing: 1px;
+    margin: 0 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .hero__title {
+        font-size: 6em;
+    }
+}
+
+.products {
+    padding: 0rem 1rem 5rem;
+}
+
+.products__container {
+    margin: 0 auto;
+    max-width: var(--CON-WIDTH);
+}
+
+.products__bestseller {
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products__title {
+    letter-spacing: 1px;
+}
+
+.products__more-link {
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+    width: 100px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 0.95em;
+    color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.prodcuts__content {
+    padding-block: 3rem;
+}
+
+.products__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    list-style: none;
+    padding: 0;
+}
+
+@media screen and (min-width: 500px) {
+    .products__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .products__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
+
+.category__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.category__link {
+    width: 100%;
+    height: 100%;
+    min-height: 85vh;
+
+    display: flex;
+    align-items: flex-end;
+    padding: 3rem;
+    text-decoration: none;
+
+    filter: sepia(50%);
+    transition: filter 0.4s ease-in-out;
+
+    &:hover {
+        filter: sepia(0%);
+    }
+}
+
+.category__link--men {
+    background: url("https://ucarecdn.com/81ffa936-50a1-4af8-a9f5-41017769192c/-/preview/967x999/")
+        no-repeat;
+    background-size: cover;
+}
+
+.category__link--women {
+    background: url("https://ucarecdn.com/051ba9d0-8086-4214-9274-8b6f28f69779/-/preview/967x999/")
+        no-repeat;
+    background-size: cover;
+}
+
+.category__content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.category__title {
+    font-size: 3.5em;
+    color: white;
+    font-weight: 400;
+    line-height: 55px;
+    letter-spacing: 1px;
+}
+
+.category__more-btn {
+    width: 100px;
+    height: 40px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .category__container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
+
+@media screen and (min-width: 995px) {
+    .category__link {
+        min-height: 100dvh;
+    }
+
+    .category__content {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .category__title {
+        font-size: 6em;
+        line-height: 6rem;
+    }
+}
