@@ -1,0 +1,115 @@
+.footer {
+    padding: 2rem 1rem;
+}
+
+.footer__container {
+    max-width: var(--CON-WIDTH);
+    margin: 0 auto;
+
+    border-top: 1px solid rgb(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    padding-block: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer__logo {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.3rem;
+    white-space: nowrap;
+
+    .footer__logo-name {
+        width: 100px;
+        padding: 5px 10px;
+
+        text-align: center;
+        background-color: black;
+        letter-spacing: 3px;
+    }
+
+    sup {
+        font-weight: 400;
+        color: black;
+
+        font-size: 0.7rem;
+        position: relative;
+        bottom: 5px;
+        left: 2px;
+    }
+
+    .footer__logo-r {
+        font-weight: 400;
+    }
+
+    .footer__logo-under {
+        display: inline-block;
+        width: 20px;
+        height: 2px;
+        background-color: black;
+        position: relative;
+        top: 9px;
+    }
+}
+
+.footer__shop {
+    margin-top: 3rem;
+}
+
+.footer__shop-title,
+.footer__info-title,
+.footer__newsletter-title {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.footer__shop-list,
+.footer__info-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.footer__info-link,
+.footer__shop-link {
+    text-decoration: none;
+    color: black;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.footer__newsletter-form {
+    margin-block: 1.5rem;
+    position: relative;
+
+    max-width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .footer__shop {
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 995px) {
+    .footer__container {
+        padding-block: 3rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}
