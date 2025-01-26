@@ -5,6 +5,7 @@
     background: url("https://ucarecdn.com/289b3d4e-6b54-43e9-b9a1-403ff8101ace/-/resize/1440x800/")
         no-repeat;
     background-size: cover;
+    background-attachment: scroll;
     background-position: center left;
     padding: 5rem 1rem;
 }
@@ -35,7 +36,8 @@
 
 @media screen and (min-width: 1024px) {
     .hero__title {
-        font-size: 6em;
+        font-size: 7em;
+        line-height: 95px;
     }
 }
 
@@ -99,6 +101,10 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .products {
+        padding-block: 2rem 4rem;
+    }
+
     .products__list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -373,6 +379,9 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .newsletter {
+        padding-block: 8rem;
+    }
     .newsletter__title {
         font-size: 5.5rem;
         line-height: normal;
