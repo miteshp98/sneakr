@@ -1,0 +1,244 @@
+.products__hero {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%),
+        url("https://ucarecdn.com/5845e86e-7be1-4cab-89e7-1c4e8f641444/-/resize/1440x547/")
+            no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 70dvh;
+
+    padding: 0 1rem;
+}
+
+.products__hero-container {
+    height: 100%;
+}
+
+.products__hero-content {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+.products__hero-title {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+}
+
+.product__hero-description {
+    text-align: center;
+    line-height: 25px;
+    font-size: 0.9em;
+    max-width: 500px;
+}
+
+@media screen and (min-width: 768px) {
+    .products__hero-title {
+        font-size: 4rem;
+    }
+
+    .product__hero-description {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .products__hero-title {
+        font-size: 6.5rem;
+    }
+}
+
+.products__showcase {
+    padding: 3rem 1rem 5rem;
+}
+
+.products__showcase-container {
+    max-width: var(--CON-WIDTH);
+    margin: 0 auto;
+}
+
+.products__search {
+    position: relative;
+}
+
+.products__input-wrap {
+    position: relative;
+}
+
+.products__search-input {
+    width: 100%;
+    height: 60px;
+    padding-inline: 35px;
+    letter-spacing: 1px;
+    background-color: rgba(239, 239, 239, 0.3);
+    border: 1px solid black;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+}
+
+.products__search-button {
+    width: 100%;
+    margin-top: 1rem;
+    height: 60px;
+    color: white;
+    background-color: black;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.prodcuts__filter-option {
+    margin-top: 1rem;
+}
+
+.product__filter-dropdown {
+    width: 100%;
+    height: 60px;
+    padding-inline: 15px;
+    background-color: transparent;
+    border: 1px solid black;
+    font-weight: 500;
+
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23222'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E")
+        no-repeat;
+    background-size: 30px 30px;
+    background-position: right 5px center;
+
+    position: relative;
+}
+
+.products__custom-trigger {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.products__options {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    border: 1px solid black;
+    top: 100%;
+    left: 0;
+
+    display: none;
+    flex-direction: column;
+}
+
+.products__option {
+    padding: 15px;
+    color: rgb(76, 76, 76);
+
+    &:hover {
+        color: black;
+    }
+}
+
+.prodcuts__option--selected {
+    color: black;
+}
+
+.products__options--expand {
+    display: flex;
+}
+
+@media screen and (min-width: 768px) {
+    .products__filter {
+        display: grid;
+        display: grid;
+        grid-template-columns: 1.5fr 0.9fr;
+        grid-template-rows: 0.5fr;
+        gap: 15px;
+    }
+
+    .products__filter-search {
+        width: 100%;
+    }
+
+    .products__search-button {
+        position: absolute;
+        margin: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5px;
+        max-width: 150px;
+        height: 50px;
+    }
+
+    .prodcuts__filter-option {
+        margin: 0;
+    }
+}
+
+.products__card-wrapper {
+    margin-top: 3rem;
+}
+
+.products__item-list {
+    list-style: none;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-auto-columns: 1fr;
+    gap: 4rem 2rem;
+}
+
+.products__card-details {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    color: black;
+
+    .prodcuts__tag {
+        color: gray;
+        font-size: 0.85rem;
+    }
+
+    .products__price {
+        letter-spacing: 1px;
+    }
+}
+
+.products__pagination {
+    margin-block: 5rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        border: none;
+        width: 100px;
+        height: 40px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .products__item-list {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-auto-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .products__item-list {
+        grid-template-columns: auto auto auto;
+    }
+}
