@@ -1,0 +1,92 @@
+.contacts {
+    padding: 7rem 1rem 2.5rem;
+}
+
+.contacts__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    max-width: var(--CON-WIDTH);
+    margin: 0 auto;
+}
+
+.contacts__form {
+    background-color: rgba(128, 128, 128, 0.1);
+    padding: 1.8rem;
+}
+
+.conatact__title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__input {
+    margin-top: 2.5rem;
+    input {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 20px 0px 10px;
+    }
+}
+
+#message {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    resize: none;
+    height: 200px;
+    padding-block: 1rem;
+}
+
+.contact__submit-btn {
+    margin-block: 1rem;
+    border-radius: 50px;
+    border: 1px solid black;
+    height: 40px;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .contacts__container {
+        flex-direction: row;
+    }
+
+    .contacts__form {
+        width: 100%;
+    }
+
+    .conatact__title {
+        font-size: 2.5rem;
+    }
+
+    .contact__input {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .contacts__img {
+        width: 100%;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .conatact__title {
+        font-size: 3rem;
+    }
+}
