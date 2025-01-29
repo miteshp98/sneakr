@@ -5,7 +5,9 @@
 @import url("style/page/product.css");
 @import url("style/page/about.css");
 @import url("style/page/blog.css");
+@import url("style/page/contactus.css");
 @import url("style/components/products.css");
 @import url("style/components/blogs-card.css");
 @import url("style/components/footer.css");
 @import url("style/components/gallery.css");
+@import url("style/components/cart.css");
