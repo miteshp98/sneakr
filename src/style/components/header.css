@@ -40,7 +40,7 @@
     position: absolute;
     top: 4.5rem;
     left: 0;
-    background-color: transparent;
+    background-color: white;
     width: 100%;
     height: 0px;
     overflow: hidden;
@@ -54,7 +54,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
 }
 
 .header__nav-link {
@@ -82,7 +82,7 @@
 }
 
 .header__nav--expand {
-    height: 185px;
+    height: 195px;
 }
 
 @media screen and (min-width: 1024px) {
