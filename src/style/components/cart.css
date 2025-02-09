@@ -41,6 +41,7 @@
 
 .cart__close-btn {
     border: none;
+    background-color: transparent;
     width: 42px;
     height: 42px;
     font-size: 1.2rem;
