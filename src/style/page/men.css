@@ -1,0 +1,7 @@
+#men__hero-bg {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%),
+        url("https://ucarecdn.com/949f6568-1ae6-454a-8f77-7400144c42c1/-/resize/2400x1600/")
+            no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
