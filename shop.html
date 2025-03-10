@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta
+            name="description"
+            content="Explore our exclusive collection of sneakers, featuring the latest styles and bestsellers. Find your perfect pair with Sneakr today!"
+        />
+        <meta
+            name="keywords"
+            content="sneakers, shoes, men's sneakers, women's sneakers, bestselling shoes, trendy footwear, Sneakr"
+        />
+        <meta name="author" content="Sneakr" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.sneakr.com/products" />
+        <meta property="og:title" content="Shop the Latest Sneakers - Sneakr" />
+        <meta
+            property="og:description"
+            content="Discover our exclusive collection of sneakers. From top styles to all-time bestsellers, find your perfect match at Sneakr."
+        />
+        <!-- <meta
+                property="og:image"
+                content="https://www.sneakr.com/images/featured-sneakers.jpg"
+            />
+            <meta property="og:url" content="https://www.sneakr.com/products" /> -->
+        <meta property="og:type" content="website" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Numans&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="src/style.css" />
+
+        <title>Shop the Latest Sneakers - Sneakr</title>
+    </head>
+    <body>
+        <!-- links rendered -->
+        <a href="product.html"></a>
+
+        <header class="header">
+            <div class="header__container">
+                <div class="header__brand">
+                    <a href="index.html" class="header__logo"> Sneak<span>r.</span></a>
+                </div>
+
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="shop.html" class="header__nav-link">Products</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="about.html" class="header__nav-link">About Us</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="blog.html" class="header__nav-link">Blog</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="contact.html" class="header__nav-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header__cart">
+                    <button class="header__cart-btn">
+                        <img src="src/assets/icons/shopping-cart.png" alt="cart" />
+                    </button>
+                </div>
+
+                <button class="header__nav-btn" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="cart">
+                <div class="cart__container">
+                    <div class="cart__header">
+                        <p class="cart__title">Your Cart</p>
+                        <button class="cart__close-btn"><i class="fa-solid fa-x"></i></button>
+                    </div>
+
+                    <div class="cart__items">
+                        <ul class="cart__list">
+                            <li class="cart__item">
+                                <div class="cart__item-img">
+                                    <img
+                                        src="https://ucarecdn.com/0a0b256b-6646-4c37-ac54-094e15184f2f/-/preview/626x782/"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="cart__item-content">
+                                    <p class="item__name">Metro Mile</p>
+                                    <p class="item__description">
+                                        This is some text inside of a div block.
+                                    </p>
+
+                                    <p class="item__quantity">
+                                        Quantity: <span class="item__quantity-count">1</span>
+                                    </p>
+                                </div>
+
+                                <button class="item__remove-btn">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cart__total-wrap">
+                        <p class="cart__subtotal-name">SubTotal</p>
+                        <p class="cart__subtotal">$ <span class="cart__amount">113.71</span> USD</p>
+                    </div>
+
+                    <div class="checkout__btn-wrap">
+                        <button class="checkout__btn">Continue to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="products__hero" id="products__hero-bg">
+                <div class="products__hero-container">
+                    <div class="products__hero-content">
+                        <h1 class="products__hero-title">Products</h1>
+
+                        <p class="product__hero-description">
+                            Unlock the Future of Fashion—Discover Techwear Today and Elevate Your
+                            Wardrobe with Cutting-Edge Apparel Designed for Tomorrow’s World.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="products__showcase">
+                <div class="products__showcase-container">
+                    <div class="products__filter">
+                        <div class="products__filter-search">
+                            <form action="" class="products__search">
+                                <div class="products__input-wrap">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <input
+                                        type="text"
+                                        class="products__search-input"
+                                        placeholder="Search..."
+                                    />
+                                </div>
+                                <button type="submit" class="products__search-button">
+                                    Search
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="prodcuts__filter-option">
+                            <div class="product__filter-dropdown">
+                                <div class="products__custom-trigger">All Products</div>
+                                <div class="products__options">
+                                    <span
+                                        class="products__option prodcuts__option--selected"
+                                        data-value="shopall"
+                                        >Shop All</span
+                                    >
+                                    <span class="products__option" data-value="men">Men</span>
+                                    <span class="products__option" data-value="women">Women</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="products__card-wrapper">
+                        <ul class="products__item-list"></ul>
+
+                        <div class="products__pagination">
+                            <button class="products__pagination-prevbtn">Prev</button>
+
+                            <button class="products__pagination-nextbtn">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newsletter">
+                <div class="newsletter__container">
+                    <div class="newsletter__details">
+                        <h2 class="newsletter__title">
+                            Cnct._ <br />
+                            with us
+                        </h2>
+                        <p class="newsletter__description">
+                            Got questions or need assistance? Our team is here to help you navigate
+                            the future of fashion. Reach out to us anytime—let’s connect and gear
+                            you up for what’s next!
+                        </p>
+
+                        <form action="" class="newsletter__form">
+                            <div class="newsletter__form-email">
+                                <input
+                                    type="email"
+                                    name="newsletter-email"
+                                    id="newsletter-email"
+                                    placeholder="Your Email"
+                                />
+                                <button type="submit" class="newsletter__submit">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="newsletter__img">
+                        <img
+                            src="https://ucarecdn.com/ac82ff3a-0789-46fd-965d-13ee0b51f51a/-/preview/800x800/"
+                            alt="A man stands on a wall, showcasing his brown boots against a neutral background."
+                        />
+                    </div>
+                </div>
+            </section>
+            <section class="gallery">
+                <div class="gallery__container">
+                    <div class="gallery__slider">
+                        <p class="gallery__slider-content">
+                            @loremipsum_lorem ? Instagram / Instagram
+                        </p>
+                    </div>
+
+                    <div class="gallery__wrap">
+                        <div class="gallery__img">
+                            <img
+                                src="https://ucarecdn.com/cea23825-ea93-4f8c-a5a3-4248672bec2f/-/preview/500x500/"
+                                alt=""
+                            />
+                        </div>
+                        <div class="gallery__img">
+                            <img
+                                src="https://ucarecdn.com/dd495521-799d-4072-b365-60515f69434b/-/preview/500x750/"
+                                alt=""
+                            />
+                        </div>
+                        <div class="gallery__img">
+                            <img
+                                src="https://ucarecdn.com/a6864ecf-719c-4761-a1be-43be40a64ead/-/preview/500x347/"
+                                alt=""
+                            />
+                        </div>
+                        <div class="gallery__img">
+                            <img
+                                src="https://ucarecdn.com/17ab7adb-413c-4cf9-ac28-de3c5081ed00/-/preview/500x821/"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo"
+                        ><span class="footer__logo-name"
+                            >Sneak<span class="footer__logo-r">r.</span></span
+                        ><sup>&copy;</sup><span class="footer__logo-under"></span>
+                    </a>
+                </div>
+
+                <div class="footer__shop">
+                    <p class="footer__shop-title">[Shop]</p>
+
+                    <ul class="footer__shop-list">
+                        <li class="footer__shop-items">
+                            <a href="shop.html" class="footer__shop-link">Products</a>
+                        </li>
+                        <li class="footer__shop-items">
+                            <a href="#" class="footer__shop-link">Why Us</a>
+                        </li>
+                        <li class="footer__shop-items">
+                            <a href="blog.html" class="footer__shop-link">Blog</a>
+                        </li>
+                        <li class="footer__shop-items">
+                            <a href="contact.html" class="footer__shop-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__info">
+                    <p class="footer__info-title">[Info]</p>
+
+                    <ul class="footer__info-list">
+                        <li class="footer__info-items">
+                            <a href="#" class="footer__info-link">Instagram</a>
+                        </li>
+                        <li class="footer__info-items">
+                            <a href="#" class="footer__info-link">Facebook</a>
+                        </li>
+                        <li class="footer__info-items">
+                            <a href="#" class="footer__info-link">Linkedin</a>
+                        </li>
+                        <li class="footer__info-items">
+                            <a href="#" class="footer__info-link">Twitter</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__newsletter">
+                    <p class="footer__newsletter-title">[Newsletter]</p>
+
+                    <form action="#" class="footer__newsletter-form">
+                        <input
+                            type="email"
+                            name="newsletter-email"
+                            id="newsletter-email"
+                            placeholder="Your Email"
+                        />
+                        <button type="submit" class="newsletter__submit">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <script type="module" src="src/main.js"></script>
+    </body>
+</html>
