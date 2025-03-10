@@ -42,6 +42,9 @@
         <title>Sneakr - Step Into Style</title>
     </head>
     <body>
+        <!-- links rendered -->
+        <a href="product.html"></a>
+
         <header class="header">
             <div class="header__container">
                 <div class="header__brand">
@@ -51,7 +54,7 @@
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
-                            <a href="products.html" class="header__nav-link">Products</a>
+                            <a href="shop.html" class="header__nav-link">Products</a>
                         </li>
                         <li class="header__nav-item">
                             <a href="about.html" class="header__nav-link">About Us</a>
@@ -67,7 +70,7 @@
 
                 <div class="header__cart">
                     <button class="header__cart-btn">
-                        <img src="src/assets/icons/shopping-cart.png" alt="cart" />
+                        <i class="fa-solid fa-cart-shopping"></i>
                     </button>
                 </div>
 
@@ -142,7 +145,7 @@
                 <div class="products__container">
                     <div class="products__bestseller">
                         <h2 class="products__title">Our Bestsellers</h2>
-                        <a href="#" class="products__more-link"
+                        <a href="shop.html" class="products__more-link"
                             >More <i class="fa-solid fa-arrow-right"></i
                         ></a>
                     </div>
@@ -150,74 +153,18 @@
                     <hr />
 
                     <div class="prodcuts__content">
-                        <ul class="products__list">
-                            <li class="products__item">
-                                <a href="#" class="products__card">
-                                    <img
-                                        src="https://ucarecdn.com/cc97fe4b-3b48-462c-b66e-13624c9608cc/-/preview/626x782/"
-                                        alt="product"
-                                        class="products__img"
-                                    />
-
-                                    <div class="products__details">
-                                        <p class="products__name">Forge Run</p>
-                                        <p class="products__price">$45.99 USD</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="products__item">
-                                <a href="#" class="products__card">
-                                    <img
-                                        src="https://ucarecdn.com/cc97fe4b-3b48-462c-b66e-13624c9608cc/-/preview/626x782/"
-                                        alt="product"
-                                        class="products__img"
-                                    />
-
-                                    <div class="products__details">
-                                        <p class="products__name">Forge Run</p>
-                                        <p class="products__price">$45.99 USD</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="products__item">
-                                <a href="#" class="products__card">
-                                    <img
-                                        src="https://ucarecdn.com/cc97fe4b-3b48-462c-b66e-13624c9608cc/-/preview/626x782/"
-                                        alt="product"
-                                        class="products__img"
-                                    />
-
-                                    <div class="products__details">
-                                        <p class="products__name">Forge Run</p>
-                                        <p class="products__price">$45.99 USD</p>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="products__item">
-                                <a href="#" class="products__card">
-                                    <img
-                                        src="https://ucarecdn.com/cc97fe4b-3b48-462c-b66e-13624c9608cc/-/preview/626x782/"
-                                        alt="product"
-                                        class="products__img"
-                                    />
-
-                                    <div class="products__details">
-                                        <p class="products__name">Forge Run</p>
-                                        <p class="products__price">$45.99 USD</p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                        <ul class="products__list"></ul>
                     </div>
                 </div>
             </section>
             <section class="category">
                 <div class="category__container">
                     <div class="category__card">
-                        <a href="#" class="category__link category__link--men">
+                        <a
+                            href="men.html"
+                            class="category__link category__link--men"
+                            data-value="men"
+                        >
                             <div class="category__content">
                                 <h2 class="category__title">for <br />/men</h2>
                                 <button class="category__more-btn">
@@ -227,7 +174,7 @@
                         </a>
                     </div>
                     <div class="category__card">
-                        <a href="#" class="category__link category__link--women">
+                        <a href="women.html" class="category__link category__link--women">
                             <div class="category__content">
                                 <h2 class="category__title">for <br />/women</h2>
                                 <button class="category__more-btn">
@@ -336,8 +283,8 @@
 
                     <div class="newsletter__img">
                         <img
-                            src="https://ucarecdn.com/f0f49c86-0cc6-4d3c-8144-a3e0be56fa05/-/resize/800x800/"
-                            alt=""
+                            src="https://ucarecdn.com/ac82ff3a-0789-46fd-965d-13ee0b51f51a/-/preview/800x800/"
+                            alt="A man stands on a wall, showcasing his brown boots against a neutral background."
                         />
                     </div>
                 </div>
@@ -383,7 +330,7 @@
         <footer class="footer">
             <div class="footer__container">
                 <div class="footer__brand">
-                    <a href="#" class="footer__logo"
+                    <a href="index.html" class="footer__logo"
                         ><span class="footer__logo-name"
                             >Sneak<span class="footer__logo-r">r.</span></span
                         ><sup>&copy;</sup><span class="footer__logo-under"></span>
@@ -395,16 +342,16 @@
 
                     <ul class="footer__shop-list">
                         <li class="footer__shop-items">
-                            <a href="#" class="footer__shop-link">Products</a>
+                            <a href="shop.html" class="footer__shop-link">Products</a>
                         </li>
                         <li class="footer__shop-items">
                             <a href="#" class="footer__shop-link">Why Us</a>
                         </li>
                         <li class="footer__shop-items">
-                            <a href="#" class="footer__shop-link">Blog</a>
+                            <a href="blog.html" class="footer__shop-link">Blog</a>
                         </li>
                         <li class="footer__shop-items">
-                            <a href="#" class="footer__shop-link">Contact</a>
+                            <a href="contact.html" class="footer__shop-link">Contact</a>
                         </li>
                     </ul>
                 </div>
