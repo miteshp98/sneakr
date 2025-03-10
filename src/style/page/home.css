@@ -312,25 +312,21 @@
         width: 70%;
     }
 }
-
 .cta {
+    padding: 2rem;
+}
+
+.cta__container {
     height: 100dvh;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.385) 100%),
-        url("https://ucarecdn.com/a3e043ad-5298-4eb0-ade3-72d8b5e8bf8e/-/resize/2400x1800/")
+        url("https://ucarecdn.com/6095d7c4-7820-4e44-bfaa-b3cae92ca934/-/resize/2000x1506/")
             no-repeat;
 
+    border-radius: 20px;
     background-size: cover;
     background-position: top center;
     overflow: hidden;
-}
-
-@keyframes marquee {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+    position: relative;
 }
 
 .newsletter {
