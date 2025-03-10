@@ -33,8 +33,6 @@ export function featureProductCard(
     productCurrency,
     slug
 ) {
-    console.log(productImage);
-
     return `<li class="products__item">
                 <a href="product.html?slug=${slug}" class="products__card">
                     <img src="${productImage}" alt="${productAlt}" class="products__img" />
@@ -79,4 +77,63 @@ export function productCard(
                     </div>
                 </a>
             </li>`;
+}
+
+export function blogCardSkeleton() {
+    const skeletonHtml = `
+            <li class="blogs__item skeleton-card">
+                <div class="skeleton skeleton-img"></div>
+                <div class="blogs__details">
+                        <p class="skeleton skeleton-text"></p>
+                        <h3 class="skeleton skeleton-text"></h3>
+                </div>
+            </li>
+`;
+
+    return skeletonHtml;
+}
+
+export function blogCard(
+    blogFeaturedImage,
+    blogImageAlt,
+    blogPostedDate,
+    blogTitle,
+    blogShortDescription,
+    slug
+) {
+    const html = `
+    <li class="blogs__item">
+        <a href="blogpost.html?slug=${slug}" class="blogs__link">
+        <div class="blogs__img">
+            <img
+                src="${blogFeaturedImage}"
+                alt="${blogImageAlt}"
+            />
+            </div>
+
+            <div class="blogs__details">
+                <p class="blogs__post-date">${blogPostedDate}</p>
+                <h3 class="blogs__title">${blogTitle}</h3>
+                <p class="blogs__about">${blogShortDescription}</p>
+            </div>
+        </a>
+    </li>
+    `;
+
+    return html;
+}
+
+export function blogCardErrorHtml() {
+    const skeletonHtml = `
+        <li class="blogs__item skeleton-card">
+            <div class="skeleton error__icon">
+                <p class="error__message">Failed to load Blogs.</p>
+            </div>
+            <div class="blogs__details">
+                <p class="skeleton skeleton-text"></p>
+                <h3 class="skeleton skeleton-text"></h3>
+            </div>
+        </li>
+`;
+    return skeletonHtml;
 }
