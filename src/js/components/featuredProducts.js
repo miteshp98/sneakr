@@ -1,5 +1,5 @@
-import { productsEntries } from "../services/contentfulClient";
-import { productLoader } from "../services/skeletonLoader";
+import { dataEntries } from "../services/contentfulClient";
+import { skeletonLoader } from "../services/skeletonLoader";
 import { featureProductCard, productSkeleton, productErrorHtml } from "../utils/markupGenerator";
 
 export async function featuredProducts() {
@@ -7,12 +7,10 @@ export async function featuredProducts() {
 
     if (!productList) return;
 
-    productLoader(productList, 4, productSkeleton);
+    skeletonLoader(productList, 4, productSkeleton);
 
     try {
-        const data = await productsEntries(0, 4, "sneakrProducts", "sys.createdAt");
-
-        productList.innerHTML = "";
+        const data = await dataEntries(0, 4, "sneakrProducts", "sys.createdAt");
 
         productList.innerHTML = data.items
             .map(({ fields: { productName, slug, productImage, price, currency } }) => {

@@ -1,5 +1,5 @@
-import { productsEntries } from "../services/contentfulClient";
-import { productLoader } from "../services/skeletonLoader";
+import { dataEntries } from "../services/contentfulClient";
+import { skeletonLoader } from "../services/skeletonLoader";
 import { productSkeleton, productErrorHtml, productCard } from "../utils/markupGenerator";
 
 export function checkCategory() {
@@ -25,10 +25,10 @@ export async function loadProducts() {
 
     if (!productItemList) return;
 
-    productLoader(productItemList, 6, productSkeleton);
+    skeletonLoader(productItemList, 6, productSkeleton);
 
     try {
-        const data = await productsEntries(0, 9, "sneakrProducts", "sys.createdAt");
+        const data = await dataEntries(0, 9, "sneakrProducts", "sys.createdAt");
 
         productItemList.innerHTML = filterProductsByCategory(data.items, selectedCategory);
     } catch (error) {

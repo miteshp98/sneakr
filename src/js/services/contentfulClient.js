@@ -1,6 +1,6 @@
 import { client } from "../utils/contentfulUtils";
 
-export async function productsEntries(skipNum, limitNum, contentType, orderBy) {
+export async function dataEntries(skipNum, limitNum, contentType, orderBy) {
     const entries = await client.getEntries({
         skip: skipNum,
         limit: limitNum,
@@ -10,4 +10,3 @@ export async function productsEntries(skipNum, limitNum, contentType, orderBy) {
 
     return entries;
 }
-
