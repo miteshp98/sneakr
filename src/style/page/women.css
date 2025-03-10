@@ -1,0 +1,7 @@
+#women__hero-bg {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%),
+        url("https://ucarecdn.com/8ff2809e-f294-4b2d-96d1-31eab1e26e7d/-/resize/2400x1600/")
+            no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
