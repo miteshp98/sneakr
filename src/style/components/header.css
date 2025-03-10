@@ -1,8 +1,9 @@
 .header {
     position: fixed;
     width: 100%;
-    background-color: white;
     z-index: 10;
+
+    transition: background-color 0.5s ease-in-out;
 }
 
 .header__container {
@@ -106,4 +107,36 @@
     .header__nav-btn {
         display: none;
     }
+}
+
+.header__nav-link--white {
+    color: white;
+}
+
+.header__logo--white {
+    color: white;
+}
+
+.header--active {
+    background-color: white;
+}
+
+.header--active .header__logo--white {
+    color: black;
+}
+
+.header--active .header__nav-link--white {
+    color: black;
+}
+
+.header--active .fa-cart-shopping {
+    color: black;
+}
+
+.fa-cart-shopping {
+    font-size: 1.3rem;
+}
+
+.fa-cart-shopping--white {
+    color: white;
 }
