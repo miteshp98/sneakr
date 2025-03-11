@@ -11,6 +11,9 @@ import { featuredProducts } from "./js/components/products/featuredProducts";
 import { loadProducts } from "./js/components/products/productList";
 import { loadBlogCard } from "./js/components/blogList";
 
+// Import CSS
+import "./style.css";
+
 // Import AOS (Animate on Scroll)
 import AOS from "aos";
 import "aos/dist/aos.css";
