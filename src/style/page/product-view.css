@@ -1,0 +1,154 @@
+.product-view {
+    padding-block: 9rem 2rem;
+    padding-inline: 1rem;
+}
+
+.productview__container {
+    max-width: var(--CON-WIDTH);
+    margin: 0 auto;
+}
+
+.product-view__image {
+    width: 100%;
+
+    > img {
+        width: 100%;
+    }
+}
+
+.product-view__details {
+    margin-block: 5rem;
+
+    > h2 {
+        font-size: 2rem;
+    }
+}
+
+.product-view__description {
+    > p {
+        margin-block: 2rem;
+        line-height: 28px;
+        text-wrap: wrap;
+        font-size: 1.1rem;
+    }
+}
+.shoe-type {
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    line-height: 0;
+}
+
+.product-view__title {
+    font-size: 1.8rem;
+    line-height: 35px;
+}
+
+.product-view__pricing {
+    margin-block: 4rem 2rem;
+
+    .product-view__discounted-price {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .product-view__price {
+        text-decoration: line-through;
+        color: gray;
+        font-size: 1.1rem;
+    }
+}
+
+.product-view__actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.product-view__quantity {
+    border: 1px solid black;
+    height: 45px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    > label {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    #quantity {
+        max-width: 50px;
+        border: none;
+        text-align: center;
+        outline: none;
+    }
+}
+
+.product-view__cart-btn {
+    width: 100%;
+    height: 45px;
+    color: white;
+    font-weight: 700;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    transition: letter-spacing 0.4s ease-in-out;
+
+    &:hover {
+        letter-spacing: 1.5px;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .productview__container {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-rows: auto;
+        gap: 80px;
+        align-items: flex-start;
+    }
+
+    .product-view__image {
+        width: 100%;
+
+        > img {
+            width: 100%;
+        }
+    }
+
+    .product-view__info {
+        width: 100%;
+        position: sticky;
+        top: 8rem;
+        height: max-content;
+    }
+
+    .product-view__actions {
+        align-items: stretch;
+        flex-direction: row;
+    }
+
+    .product-view__quantity {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .product-view__title {
+        font-size: 2em;
+    }
+
+    .product-view__pricing {
+        .product-view__discounted-price {
+            font-size: 2.2rem;
+        }
+
+        .product-view__price {
+            font-size: 1.2rem;
+        }
+    }
+}
