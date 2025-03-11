@@ -24,6 +24,8 @@
 
 .about__hero-title {
     font-size: 4rem;
+    transform: scale(1.1);
+    opacity: 0;
 }
 
 .about__hero-description {
@@ -34,6 +36,7 @@
     line-height: 20px;
     font-weight: 500;
     padding-inline: 2rem;
+    transform: translate3d(0, -100px, 0);
 }
 
 @media screen and (min-width: 768px) {
@@ -63,6 +66,7 @@
 .aboutus__header-title {
     font-size: 2.8rem;
     line-height: 50px;
+    transform: translate3d(0, -100px, 0);
 }
 
 .aboutus__header-link {

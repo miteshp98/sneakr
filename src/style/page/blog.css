@@ -24,12 +24,15 @@
 
 .blog__hero-title {
     font-size: 4rem;
+    transform: scale(1.1);
+    opacity: 0;
 }
 
 .blog__hero-description {
     text-align: center;
     font-size: 0.95rem;
     max-width: 450px;
+    transform: translate3d(0, -100px, 0);
 }
 
 @media screen and (min-width: 768px) {

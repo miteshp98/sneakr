@@ -1,13 +1,16 @@
 .hero {
     position: relative;
     height: 100%;
-    min-height: 80dvh;
+    min-height: 100dvh;
     background: url("https://ucarecdn.com/289b3d4e-6b54-43e9-b9a1-403ff8101ace/-/resize/1440x800/")
         no-repeat;
     background-size: cover;
     background-attachment: scroll;
     background-position: center left;
     padding: 5rem 1rem;
+}
+.sec-1 {
+    overflow: hidden;
 }
 
 .hero__container {
@@ -24,6 +27,8 @@
     margin-block: 1rem;
     font-size: 5em;
     line-height: 75px;
+    transform: scale(1.1);
+    opacity: 0;
 }
 
 .hero__description {
@@ -32,6 +37,7 @@
     line-height: 25px;
     letter-spacing: 1px;
     margin: 0 10px;
+    transform: translate3d(0, -100px, 0);
 }
 
 @media screen and (min-width: 1024px) {
@@ -144,6 +150,9 @@
     }
 }
 
+.category__card {
+    overflow: hidden;
+}
 .category__link--men {
     background: url("https://ucarecdn.com/81ffa936-50a1-4af8-a9f5-41017769192c/-/preview/967x999/")
         no-repeat;

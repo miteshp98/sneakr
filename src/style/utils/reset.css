@@ -17,6 +17,7 @@ body {
     -webkit-font-smoothing: antialiased;
 
     font-family: var(--font-archivo);
+    overflow-x: hidden;
 }
 
 /* 5. Improve media defaults */
