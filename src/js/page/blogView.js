@@ -28,9 +28,9 @@ export async function loadBlogPost() {
             return entry.fields.slug === blogSlug;
         });
 
-        if (!selectedBlog) {
-            throw new Error(`Product no found`);
-        }
+        // if (!selectedBlog) {
+        //     throw new Error(`Product no found`);
+        // }
 
         const {
             blogTitle,

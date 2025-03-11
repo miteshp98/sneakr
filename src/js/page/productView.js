@@ -28,9 +28,9 @@ export async function loadProductDetails() {
             return entry.fields.slug === productSlug;
         });
 
-        if (!selectedProduct) {
-            throw new Error(`Product no found`);
-        }
+        // if (!selectedProduct) {
+        //     throw new Error(`Product no found`);
+        // }
 
         const {
             productName,
