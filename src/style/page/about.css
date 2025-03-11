@@ -23,7 +23,7 @@
 }
 
 .about__hero-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
 }
 
 .about__hero-description {
@@ -33,6 +33,7 @@
     text-align: center;
     line-height: 20px;
     font-weight: 500;
+    padding-inline: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -107,6 +108,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .about__hero-title {
+        font-size: 7rem;
+    }
+
     .aboutus__card-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
