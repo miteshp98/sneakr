@@ -13,14 +13,25 @@ export async function featuredProducts() {
         const data = await dataEntries(0, 4, "sneakrProducts", "sys.createdAt");
 
         productList.innerHTML = data.items
-            .map(({ fields: { productName, slug, productImage, price, currency } }) => {
-                const {
-                    description: altText,
-                    file: { url: imageUrl },
-                } = productImage.fields;
+            .map(
+                ({
+                    fields: { productName, slug, productImage, price, currency, discountedPrice },
+                }) => {
+                    const {
+                        description: altText,
+                        file: { url: imageUrl },
+                    } = productImage.fields;
 
-                return featureProductCard(imageUrl, altText, productName, price, currency, slug);
-            })
+                    return featureProductCard(
+                        imageUrl,
+                        altText,
+                        productName,
+                        discountedPrice,
+                        currency,
+                        slug
+                    );
+                }
+            )
             .join("");
     } catch (error) {
         console.error("Error fetching products:", error.message || error);
