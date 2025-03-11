@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
+
 :root {
-    --font-archivo: "Numans", serif;
+    --font-archivo: "Oxanium", sans-serif;
 
     --CON-WIDTH: 1350px;
 }
