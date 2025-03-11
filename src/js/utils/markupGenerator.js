@@ -1,3 +1,4 @@
+// Product Skeleton Structure
 export function productSkeleton() {
     const skeletonHtml = `
     <li class="products__item skeleton-card">
@@ -13,6 +14,7 @@ export function productSkeleton() {
     return skeletonHtml;
 }
 
+// Product Product Error  Structure
 export function productErrorHtml() {
     const skeletonHtml = `
         <li class="products__item skeleton-card">
@@ -25,6 +27,7 @@ export function productErrorHtml() {
     return skeletonHtml;
 }
 
+// Feature Product Card Structure
 export function featureProductCard(
     productImage,
     productAlt,
@@ -33,7 +36,7 @@ export function featureProductCard(
     productCurrency,
     slug
 ) {
-    return `<li class="products__item">
+    return `<li class="products__item" data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out-cubic">
                 <a href="product.html?slug=${slug}" class="products__card">
                     <img src="${productImage}" alt="${productAlt}" class="products__img" />
                         <div class="products__details">
@@ -44,6 +47,7 @@ export function featureProductCard(
             </li>`;
 }
 
+// Product Card  Structure
 export function productCard(
     productImage,
     productAlt,
@@ -79,6 +83,7 @@ export function productCard(
             </li>`;
 }
 
+// Blog Card Skeleton Structure
 export function blogCardSkeleton() {
     const skeletonHtml = `
             <li class="blogs__item skeleton-card">
@@ -93,6 +98,7 @@ export function blogCardSkeleton() {
     return skeletonHtml;
 }
 
+// Blog Card Structure
 export function blogCard(
     blogFeaturedImage,
     blogImageAlt,
@@ -123,6 +129,7 @@ export function blogCard(
     return html;
 }
 
+// Product Error Structure
 export function blogCardErrorHtml() {
     const skeletonHtml = `
         <li class="blogs__item skeleton-card">
@@ -138,6 +145,7 @@ export function blogCardErrorHtml() {
     return skeletonHtml;
 }
 
+// Page Loader Structure
 export function pageLoader() {
     const loaderHtml = `                  
                     <div class="loader-container">
@@ -146,6 +154,7 @@ export function pageLoader() {
     return loaderHtml;
 }
 
+// Product Page Structure Structure
 export function productViewHtml(
     productImg,
     imageAlt,
@@ -153,14 +162,20 @@ export function productViewHtml(
     productType,
     productName,
     productPrice,
-    productDiscountedPrice
+    productDiscountedPrice,
+    productId
 ) {
     const html = `
-                <div class="product-view__preview">
+            <div class="product" data-id="${productId}">
+                <div class="product-view__preview"                         
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                            data-aos-easing="ease-in-out-quart">
                     <div class="product-view__image">
                             <img
                                 src="${productImg}"
                                 alt="${imageAlt}"
+                                class="product__image"
                             />
                     </div>
 
@@ -173,27 +188,35 @@ export function productViewHtml(
                     </div>
                     </div>
 
-                    <div class="product-view__info">
+                    <div class="product-view__info"      
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                            data-aos-easing="ease-in-out-quart"
+                            data-aos-delay="500">
+                            
                             <span class="shoe-type">${productType}</span>
                             <h1 class="product-view__title">${productName}</h1>
+
                         <div class="product-view__pricing">
-                            <p class="product-view__discounted-price">$ <span>${productDiscountedPrice}</span> USD</p>
+                            <p class="product-view__discounted-price">$ <span class="shoe__price">${productDiscountedPrice}</span> USD</p>
                             <p class="product-view__price">$ <span>${productPrice}</span> USD</p>
                         </div>
 
                         <div class="product-view__actions">
                             <div class="product-view__quantity">
                                 <label for="quantity">Quantity</label>
-                                <input type="number" name="quantity" id="quantity" value="1" />
+                                <input type="number" name="quantity" id="quantity" value="1" min="1"/>
                             </div>
-                            <button class="product-view__cart-btn">Add To Cart</button>
+                            <button class="product-view__cart-btn add-to-cart-btn">Add To Cart</button>
                         </div>
                     </div>
+        </div>
     `;
 
     return html;
 }
 
+// Dynamic Page SEO Structure
 export function pageSEOHtml(seoTitle, seoDescription, seoTags) {
     const head = document.querySelector("head");
     head.querySelector("title").textContent = seoTitle;
@@ -201,6 +224,7 @@ export function pageSEOHtml(seoTitle, seoDescription, seoTags) {
     head.querySelector("meta[name='keywords']").content = seoTags.join(",");
 }
 
+// Blog Page Structure
 export function blogViewHtml(
     blogPostedDate,
     blogName,
@@ -230,5 +254,80 @@ export function blogViewHtml(
         <div class="blog__post">${blogPost}</div>
     `;
 
+    return html;
+}
+
+// Cart Structure
+export function cartViewHtml(cart, cartTotal) {
+    const html = `
+                <div class="cart__header">
+                    <p class="cart__title">Your Cart</p>
+                    <button class="cart__close-btn"><i class="fa-solid fa-x"></i></button>
+                </div>
+
+                <div class="cart__items">
+                    <ul class="cart__list">
+
+                    ${cart
+                        .map(({ id, name, quantity, price, image }) => {
+                            return `
+                                 <li class="cart__item" data-id="${id}">
+                                    <div class="cart__item-img">
+                                        <img
+                                            src="${image}"
+                                            alt="product-image"
+                                        />
+                                    </div>
+                                    <div class="cart__item-content">
+                                        <p class="item__name">${name}</p>
+
+                                        <p class="item__quantity">
+                                        Quantity: <input type="number" name="cart__product-quantity" 
+                                                    id="cart__product-quantity" min="0" value="${quantity}" />
+                                
+                                        </p>
+                                    </div>
+
+                                    <button class="item__remove-btn">
+                                        <i class="fa-solid fa-x"></i>
+                                    </button>
+                                </li>`;
+                        })
+                        .join("")}
+                    </ul>
+                </div>
+
+                <div class="cart__total-wrap">
+                    <p class="cart__subtotal-name">SubTotal</p>
+                    <p class="cart__subtotal">$ <span class="cart__amount">${cartTotal.toFixed(
+                        2
+                    )}</span> USD</p>
+                </div>
+
+                <div class="checkout__btn-wrap">
+                    <button class="checkout__btn">Continue to Checkout</button>
+                </div>
+
+                <div class="checkout__disabled">
+                    <p class="checkout__disabled-msg">Checkout is disabled for now</p>
+                </div>
+    `;
+    return html;
+}
+
+// Empty Cart Structure
+export function emptyCartHtml() {
+    const html = `
+                <div class="cart__header">
+                    <p class="cart__title">Your Cart</p>
+                    <button class="cart__close-btn"><i class="fa-solid fa-x"></i></button>
+                </div>
+
+                <div class="empty__cart">
+                        <p class="empty__cart-msg">No Items Found.</p>
+
+                        <a href="shop.html"> Shop Now </a>
+                </div>
+    `;
     return html;
 }
