@@ -103,7 +103,7 @@ export function blogCard(
 ) {
     const html = `
     <li class="blogs__item">
-        <a href="blogpost.html?slug=${slug}" class="blogs__link">
+        <a href="post.html?slug=${slug}" class="blogs__link">
         <div class="blogs__img">
             <img
                 src="${blogFeaturedImage}"
@@ -138,7 +138,7 @@ export function blogCardErrorHtml() {
     return skeletonHtml;
 }
 
-export function productViewLoader() {
+export function pageLoader() {
     const loaderHtml = `                  
                     <div class="loader-container">
                         <span class="loader"></span>
@@ -194,9 +194,41 @@ export function productViewHtml(
     return html;
 }
 
-export function productViewSEOHtml(seoTitle, seoDescription, seoTags) {
+export function pageSEOHtml(seoTitle, seoDescription, seoTags) {
     const head = document.querySelector("head");
     head.querySelector("title").textContent = seoTitle;
     head.querySelector("meta[name='description']").content = seoDescription;
     head.querySelector("meta[name='keywords']").content = seoTags.join(",");
+}
+
+export function blogViewHtml(
+    blogPostedDate,
+    blogName,
+    blogDescription,
+    blogImage,
+    imageAlt,
+    blogPost
+) {
+    const html = `
+            <div class="blogview__header">
+                <p class="blog_posteddate">${blogPostedDate}</p>
+                    <h1 class="blog__name">
+                        ${blogName}
+                    </h1>
+                        <p class="blog__shortDescrip">
+                        ${blogDescription}
+                        </p>
+                    </div>
+
+                <div class="blog__image">
+                    <img
+                        src="${blogImage}"
+                        alt="${imageAlt}"
+                    />
+                </div>
+
+        <div class="blog__post">${blogPost}</div>
+    `;
+
+    return html;
 }
