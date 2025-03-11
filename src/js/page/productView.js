@@ -1,4 +1,4 @@
-import { productViewLoader, productViewHtml, productViewSEOHtml } from "../utils/markupGenerator";
+import { pageLoader, productViewHtml, pageSEOHtml } from "../utils/markupGenerator";
 import { client } from "../utils/contentfulUtils";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
@@ -18,7 +18,7 @@ export async function loadProductDetails() {
 
     if (!productContainer) return;
 
-    productContainer.innerHTML = productViewLoader();
+    productContainer.innerHTML = pageLoader();
 
     try {
         const productEntries = await client.getEntries();
@@ -51,7 +51,7 @@ export async function loadProductDetails() {
             shoesType,
         } = selectedProduct.fields;
 
-        productViewSEOHtml(seoTitle, metaDescription, metaTags);
+        pageSEOHtml(seoTitle, metaDescription, metaTags);
 
         productContainer.innerHTML = productViewHtml(
             productImageUrl,
