@@ -1,13 +1,38 @@
-import toggleNav from "./js/components/navbarToggle";
-import toggleCart from "./js/components/toggleCart";
-import { featuredProducts } from "./js/components/featuredProducts";
-import toggleCategoryDropdown from "./js/components/productFilterDropdown";
-import { loadProducts } from "./js/components/productList";
-import { loadBlogCard } from "./js/components/blogList";
-import { headerControl } from "./js/components/headerScroll";
+// Import UI Components
+import toggleNav from "./js/components/header/navbarToggle";
+import toggleCart from "./js/components/cart/toggleCart";
+import toggleCategoryDropdown from "./js/components/products/productFilterDropdown";
+import { headerControl } from "./js/components/header/headerScroll";
+import { updateCartUI } from "./js/components/cart/cartUi";
+import { setupCartEvents } from "./js/components/cart/cartEvent";
 
-const displayedFeaturedProducts = featuredProducts();
-const manageCategoryDropdown = toggleCategoryDropdown();
-headerControl();
-loadBlogCard();
-loadProducts();
+// Import Product & Blog Features
+import { featuredProducts } from "./js/components/products/featuredProducts";
+import { loadProducts } from "./js/components/products/productList";
+import { loadBlogCard } from "./js/components/blogList";
+
+// Import AOS (Animate on Scroll)
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+// Initialize all functionalities
+function initializeApp() {
+    // UI & Navigation Controls
+    toggleNav;
+    toggleCart;
+    toggleCategoryDropdown();
+    headerControl();
+    setupCartEvents();
+    updateCartUI(JSON.parse(sessionStorage.getItem("cart")) || []);
+
+    // Product & Blog Loading
+    featuredProducts();
+    loadProducts();
+    loadBlogCard();
+
+    // Initialize AOS for scroll animations
+    AOS.init();
+}
+
+// Run the application
+initializeApp();
