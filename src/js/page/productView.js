@@ -15,10 +15,11 @@ redirectIfInvalidSlug();
 
 export async function loadProductDetails() {
     const productContainer = document.querySelector(".productview__container");
+    const pageLoader = document.querySelector(".loader-container");
 
-    if (!productContainer) return;
+    if (!productContainer || !pageLoader) return;
 
-    productContainer.innerHTML = pageLoader();
+    pageLoader.style.display = "none";
 
     try {
         const productEntries = await client.getEntries();
@@ -49,6 +50,7 @@ export async function loadProductDetails() {
             metaDescription,
             metaTags,
             shoesType,
+            id,
         } = selectedProduct.fields;
 
         pageSEOHtml(seoTitle, metaDescription, metaTags);
@@ -60,7 +62,8 @@ export async function loadProductDetails() {
             shoesType,
             productName,
             price,
-            discountedPrice
+            discountedPrice,
+            id
         );
     } catch (error) {
         console.error("Error fetching products:", error.message || error);

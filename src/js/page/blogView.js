@@ -15,10 +15,11 @@ redirectIfInvalidSlug();
 
 export async function loadBlogPost() {
     const blogContainer = document.querySelector(".blogview__container");
+    const pageLoader = document.querySelector(".loader-container");
 
-    if (!blogContainer) return;
+    if (!blogContainer || !pageLoader) return;
 
-    blogContainer.innerHTML = pageLoader();
+    pageLoader.style.display = "none";
 
     try {
         const blogEntries = await client.getEntries();
