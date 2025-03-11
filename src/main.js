@@ -3,7 +3,7 @@ import toggleNav from "./js/components/header/navbarToggle";
 import toggleCart from "./js/components/cart/toggleCart";
 import toggleCategoryDropdown from "./js/components/products/productFilterDropdown";
 import { headerControl } from "./js/components/header/headerScroll";
-import { updateCartUI } from "./js/components/cart/cartUi";
+import { updateCartUI } from "./js/components/cart/cartUI";
 import { setupCartEvents } from "./js/components/cart/cartEvent";
 
 // Import Product & Blog Features

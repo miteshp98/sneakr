@@ -1,4 +1,4 @@
-import { updateCartUI, updateCartIndicator } from "./cartUi";
+import { updateCartUI, updateCartIndicator } from "./cartUI";
 
 const cart = JSON.parse(sessionStorage.getItem("cart")) || [];
 
