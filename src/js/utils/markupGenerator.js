@@ -137,3 +137,66 @@ export function blogCardErrorHtml() {
 `;
     return skeletonHtml;
 }
+
+export function productViewLoader() {
+    const loaderHtml = `                  
+                    <div class="loader-container">
+                        <span class="loader"></span>
+                    </div>`;
+    return loaderHtml;
+}
+
+export function productViewHtml(
+    productImg,
+    imageAlt,
+    productDescription,
+    productType,
+    productName,
+    productPrice,
+    productDiscountedPrice
+) {
+    const html = `
+                <div class="product-view__preview">
+                    <div class="product-view__image">
+                            <img
+                                src="${productImg}"
+                                alt="${imageAlt}"
+                            />
+                    </div>
+
+                    <div class="product-view__details">
+                            <h2>Details</h2>
+
+                            <div class="product-view__description">
+                            <p>${productDescription}</p>
+                            </div>
+                    </div>
+                    </div>
+
+                    <div class="product-view__info">
+                            <span class="shoe-type">${productType}</span>
+                            <h1 class="product-view__title">${productName}</h1>
+                        <div class="product-view__pricing">
+                            <p class="product-view__discounted-price">$ <span>${productDiscountedPrice}</span> USD</p>
+                            <p class="product-view__price">$ <span>${productPrice}</span> USD</p>
+                        </div>
+
+                        <div class="product-view__actions">
+                            <div class="product-view__quantity">
+                                <label for="quantity">Quantity</label>
+                                <input type="number" name="quantity" id="quantity" value="1" />
+                            </div>
+                            <button class="product-view__cart-btn">Add To Cart</button>
+                        </div>
+                    </div>
+    `;
+
+    return html;
+}
+
+export function productViewSEOHtml(seoTitle, seoDescription, seoTags) {
+    const head = document.querySelector("head");
+    head.querySelector("title").textContent = seoTitle;
+    head.querySelector("meta[name='description']").content = seoDescription;
+    head.querySelector("meta[name='keywords']").content = seoTags.join(",");
+}
