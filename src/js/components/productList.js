@@ -43,13 +43,33 @@ function filterProductsByCategory(products, category) {
             if (!category) return true;
             return fields.category.toLowerCase() === category;
         })
-        .map(({ fields: { productName, slug, productImage, price, currency, category } }) => {
-            const {
-                description: altText,
-                file: { url: imageUrl },
-            } = productImage.fields;
+        .map(
+            ({
+                fields: {
+                    productName,
+                    slug,
+                    productImage,
+                    price,
+                    currency,
+                    category,
+                    discountedPrice,
+                },
+            }) => {
+                const {
+                    description: altText,
+                    file: { url: imageUrl },
+                } = productImage.fields;
 
-            return productCard(imageUrl, altText, productName, price, currency, category, slug);
-        })
+                return productCard(
+                    imageUrl,
+                    altText,
+                    productName,
+                    discountedPrice,
+                    currency,
+                    category,
+                    slug
+                );
+            }
+        )
         .join("");
 }
