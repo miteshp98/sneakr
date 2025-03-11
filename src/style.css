@@ -8,10 +8,13 @@
 @import url("style/page/men.css");
 @import url("style/page/women.css");
 @import url("style/page/contactus.css");
+@import url("style/page/product-view.css");
+@import url("style/page/page-not-found.css");
 @import url("style/components/products-card.css");
 @import url("style/components/blogs-card.css");
 @import url("style/components/footer.css");
 @import url("style/components/gallery.css");
 @import url("style/components/cart.css");
 @import url("style/utils/skeletonLoader.css");
+@import url("style/utils/product-loder.css");
 @import url("style/utils/errorSkeleton.css");
