@@ -44,6 +44,8 @@
         <a href="product.html"></a>
 
         <header class="header">
+            <div class="bg-overlay"></div>
+
             <div class="header__container">
                 <div class="header__brand">
                     <a href="index.html" class="header__logo"> Sneak<span>r.</span></a>
@@ -68,6 +70,7 @@
 
                 <div class="header__cart">
                     <button class="header__cart-btn">
+                        <span class="cart-icon__dot cart-icon__dot--black"></span>
                         <i class="fa-solid fa-cart-shopping"></i>
                     </button>
                 </div>
@@ -78,48 +81,7 @@
             </div>
 
             <div class="cart">
-                <div class="cart__container">
-                    <div class="cart__header">
-                        <p class="cart__title">Your Cart</p>
-                        <button class="cart__close-btn"><i class="fa-solid fa-x"></i></button>
-                    </div>
-
-                    <div class="cart__items">
-                        <ul class="cart__list">
-                            <li class="cart__item">
-                                <div class="cart__item-img">
-                                    <img
-                                        src="https://ucarecdn.com/0a0b256b-6646-4c37-ac54-094e15184f2f/-/preview/626x782/"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="cart__item-content">
-                                    <p class="item__name">Metro Mile</p>
-                                    <p class="item__description">
-                                        This is some text inside of a div block.
-                                    </p>
-
-                                    <p class="item__quantity">
-                                        Quantity: <span class="item__quantity-count">1</span>
-                                    </p>
-                                </div>
-
-                                <button class="item__remove-btn">
-                                    <i class="fa-solid fa-x"></i>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="cart__total-wrap">
-                        <p class="cart__subtotal-name">SubTotal</p>
-                        <p class="cart__subtotal">$ <span class="cart__amount">113.71</span> USD</p>
-                    </div>
-
-                    <div class="checkout__btn-wrap">
-                        <button class="checkout__btn">Continue to Checkout</button>
-                    </div>
-                </div>
+                <div class="cart__container"></div>
             </div>
         </header>
 

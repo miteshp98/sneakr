@@ -47,6 +47,8 @@
         <a href="product.html"></a>
 
         <header class="header">
+            <div class="bg-overlay"></div>
+
             <div class="header__container">
                 <div class="header__brand">
                     <a href="index.html" class="header__logo header__logo--white">
@@ -81,6 +83,7 @@
 
                 <div class="header__cart">
                     <button class="header__cart-btn">
+                        <span class="cart-icon__dot cart-icon__dot--black"></span>
                         <i class="fa-solid fa-cart-shopping fa-cart-shopping--white"></i>
                     </button>
                 </div>
@@ -91,57 +94,29 @@
             </div>
 
             <div class="cart">
-                <div class="cart__container">
-                    <div class="cart__header">
-                        <p class="cart__title">Your Cart</p>
-                        <button class="cart__close-btn"><i class="fa-solid fa-x"></i></button>
-                    </div>
-
-                    <div class="cart__items">
-                        <ul class="cart__list">
-                            <li class="cart__item">
-                                <div class="cart__item-img">
-                                    <img
-                                        src="https://ucarecdn.com/0a0b256b-6646-4c37-ac54-094e15184f2f/-/preview/626x782/"
-                                        alt=""
-                                    />
-                                </div>
-                                <div class="cart__item-content">
-                                    <p class="item__name">Metro Mile</p>
-                                    <p class="item__description">
-                                        This is some text inside of a div block.
-                                    </p>
-
-                                    <p class="item__quantity">
-                                        Quantity: <span class="item__quantity-count">1</span>
-                                    </p>
-                                </div>
-
-                                <button class="item__remove-btn">
-                                    <i class="fa-solid fa-x"></i>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="cart__total-wrap">
-                        <p class="cart__subtotal-name">SubTotal</p>
-                        <p class="cart__subtotal">$ <span class="cart__amount">113.71</span> USD</p>
-                    </div>
-
-                    <div class="checkout__btn-wrap">
-                        <button class="checkout__btn">Continue to Checkout</button>
-                    </div>
-                </div>
+                <div class="cart__container"></div>
             </div>
         </header>
         <main>
             <section class="products__hero" id="women__hero-bg">
                 <div class="products__hero-container">
                     <div class="products__hero-content">
-                        <h1 class="products__hero-title">Women</h1>
+                        <h1
+                            class="products__hero-title"
+                            data-aos="fade-up"
+                            data-aos-duration="1500"
+                            data-aos-easing="ease-in-out-quart"
+                            data-aos-delay="5000"
+                        >
+                            Women
+                        </h1>
 
-                        <p class="product__hero-description">
+                        <p
+                            class="product__hero-description"
+                            data-aos="fade-down"
+                            data-aos-duration="1500"
+                            data-aos-easing="ease-in-out-quart"
+                        >
                             Step into style with our exclusive range of women's footwear. From
                             trendy sneakers to everyday essentials, our collection blends fashion
                             with functionality, ensuring comfort and elegance in every step.
@@ -196,7 +171,13 @@
             <section class="newsletter">
                 <div class="newsletter__container">
                     <div class="newsletter__details">
-                        <h2 class="newsletter__title">
+                        <h2
+                            class="newsletter__title"
+                            data-aos="fade-right"
+                            data-aos-offset="300"
+                            data-aos-easing="ease-in-sine"
+                            data-aos-duration="1000"
+                        >
                             Cnct._ <br />
                             with us
                         </h2>
@@ -237,7 +218,12 @@
                         </p>
                     </div>
 
-                    <div class="gallery__wrap">
+                    <div
+                        class="gallery__wrap"
+                        data-aos="fade-up"
+                        data-aos-easing="ease-in-out-cubic"
+                        data-aos-duration="1000"
+                    >
                         <div class="gallery__img">
                             <img
                                 src="https://ucarecdn.com/cea23825-ea93-4f8c-a5a3-4248672bec2f/-/preview/500x500/"
