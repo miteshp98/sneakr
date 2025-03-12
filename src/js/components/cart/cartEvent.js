@@ -25,7 +25,7 @@ function handleAddToCart(addToCatBtn, e) {
         const productElement = e.target.closest(".product");
         const quantityInput = productElement.querySelector("#quantity");
 
-        if (+quantityInput.value === 0) {
+        if (parseInt(quantityInput.value) === 0) {
             return;
         }
 
@@ -77,11 +77,11 @@ function handleQuantityEvents() {
     document.addEventListener("change", function (e) {
         const quantityInput = e.target.closest("#cart__product-quantity");
 
-        if (quantityInput.value < 0) {
-            return;
-        }
-
         if (quantityInput) {
+            if (parseInt(quantityInput.value) < 0) {
+                return;
+            }
+
             const element = e.target.closest(".cart__item");
             quantityInput.style.opacity = "0.5";
             quantityInput.disabled = true;
