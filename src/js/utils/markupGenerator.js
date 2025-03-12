@@ -37,7 +37,7 @@ export function featureProductCard(
     slug
 ) {
     return `<li class="products__item" data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out-cubic">
-                <a href="product.html?slug=${slug}" class="products__card">
+                <a href="./product.html?slug=${slug}" class="products__card">
                     <img src="${productImage}" alt="${productAlt}" class="products__img" />
                         <div class="products__details">
                             <p class="products__name">${productTitle}</p>
@@ -58,7 +58,7 @@ export function productCard(
     slug
 ) {
     return ` <li class="products__item">
-                <a href="product.html?slug=${slug}" class="products__card">
+                <a href="./product.html?slug=${slug}" class="products__card">
                     <div class="products__img-wrap">
                             <img
                                 src="${productImage}"
@@ -109,7 +109,7 @@ export function blogCard(
 ) {
     const html = `
     <li class="blogs__item">
-        <a href="post.html?slug=${slug}" class="blogs__link">
+        <a href="./post.html?slug=${slug}" class="blogs__link">
         <div class="blogs__img">
             <img
                 src="${blogFeaturedImage}"
@@ -326,7 +326,7 @@ export function emptyCartHtml() {
                 <div class="empty__cart">
                         <p class="empty__cart-msg">No Items Found.</p>
 
-                        <a href="shop.html"> Shop Now </a>
+                        <a href="./shop.html"> Shop Now </a>
                 </div>
     `;
     return html;

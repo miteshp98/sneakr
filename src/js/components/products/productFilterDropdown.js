@@ -23,13 +23,13 @@ function toggleCategoryDropdown() {
 function redirectToCategory(value) {
     switch (value) {
         case "men":
-            window.location.href = "men.html";
+            window.location.href = "./men.html";
             break;
         case "women":
-            window.location.href = "women.html";
+            window.location.href = "./women.html";
             break;
         case "shopall":
-            window.location.href = "shop.html";
+            window.location.href = "./shop.html";
             break;
         default:
             return;
