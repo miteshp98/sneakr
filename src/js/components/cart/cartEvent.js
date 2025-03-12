@@ -23,31 +23,37 @@ export function setupCartEvents() {
 function handleAddToCart(addToCatBtn, e) {
     if (addToCatBtn) {
         const productElement = e.target.closest(".product");
+        const quantityInput = productElement.querySelector("#quantity");
+
+        if (+quantityInput.value === 0) {
+            return;
+        }
 
         const product = {
             id: productElement.dataset.id,
             name: productElement.querySelector(".product-view__title").textContent,
-            quantity: parseFloat(productElement.querySelector("#quantity").value),
+            quantity: parseInt(quantityInput.value),
             price: parseFloat(productElement.querySelector(".shoe__price").textContent),
             image: productElement.querySelector(".product__image").src,
         };
 
-        addToCatBtn.textContent = "Adding to cart...";
+        addToCatBtn.textContent = "Adding To Cart...";
         addToCatBtn.disabled = true;
         addToCatBtn.classList.add("add-to-cart-btn--disabled");
 
         addToCart(product);
-        addToCartBtnTimer(addToCatBtn);
+        addToCartBtnTimer(addToCatBtn, quantityInput);
     }
 }
 
-function addToCartBtnTimer(element) {
+function addToCartBtnTimer(element, input) {
     let cartTimeout;
     clearTimeout(cartTimeout);
     cartTimeout = setTimeout(() => {
         element.textContent = "Add To Cart";
         element.disabled = false;
         element.classList.remove("add-to-cart-btn--disabled");
+        input.value = 1;
     }, 1500);
 }
 
@@ -71,11 +77,15 @@ function handleQuantityEvents() {
     document.addEventListener("change", function (e) {
         const quantityInput = e.target.closest("#cart__product-quantity");
 
+        if (quantityInput.value < 0) {
+            return;
+        }
+
         if (quantityInput) {
             const element = e.target.closest(".cart__item");
             quantityInput.style.opacity = "0.5";
             quantityInput.disabled = true;
-            handleQuantityField(element.dataset, quantityInput.value);
+            handleQuantityField(element.dataset, parseInt(quantityInput.value));
             quantityInputTimer(quantityInput);
         }
     });
