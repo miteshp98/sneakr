@@ -2,25 +2,30 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+
         <meta
             name="description"
-            content="Discover the ultimate destination for stylish and comfortable footwear. Sneakr offers a wide range of sneakers for every occasion. Step into style today!"
+            content="Explore our exclusive collection of sneakers, featuring the latest styles and bestsellers. Find your perfect pair with Sneakr today!"
         />
         <meta
             name="keywords"
-            content="sneakers, stylish shoes, comfortable footwear, trendy sneakers, shoe store, Sneakr"
+            content="sneakers, shoes, men's sneakers, women's sneakers, bestselling shoes, trendy footwear, Sneakr"
         />
-        <meta name="author" content="Mitesh Panchal" />
+        <meta name="author" content="Sneakr" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Sneakr - Step Into Style" />
+        <link rel="canonical" href="https://www.sneakr.com/products" />
+        <meta property="og:title" content="Shop the Latest Sneakers - Sneakr" />
         <meta
             property="og:description"
-            content="Explore a wide range of trendy and comfortable sneakers with Sneakr. Step into style and elevate your footwear game today!"
+            content="Discover our exclusive collection of sneakers. From top styles to all-time bestsellers, find your perfect match at Sneakr."
         />
+        <!-- <meta
+                property="og:image"
+                content="https://www.sneakr.com/images/featured-sneakers.jpg"
+            />
+            <meta property="og:url" content="https://www.sneakr.com/products" /> -->
         <meta property="og:type" content="website" />
-        <!-- <meta property="og:url" content="https://www.sneakr.com" />
-        <meta property="og:image" content="https://www.sneakr.com/assets/sneakr-og-image.jpg" /> -->
 
         <link
             rel="stylesheet"
@@ -39,7 +44,7 @@
 
         <link rel="stylesheet" href="./src/style.css" />
 
-        <title>Sneakr - Step Into Style</title>
+        <title>Shop the Latest Sneakers - Sneakr</title>
     </head>
     <body>
         <!-- links rendered -->
@@ -50,35 +55,47 @@
 
             <div class="header__container">
                 <div class="header__brand">
-                    <a href="./index.html" class="header__logo"> Sneak<span>r.</span></a>
+                    <a href="./index.html" class="header__logo header__logo--white">
+                        Sneak<span>r.</span></a
+                    >
                 </div>
 
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
-                            <a href="./shop.html" class="header__nav-link">Products</a>
+                            <a href="./shop.html" class="header__nav-link header__nav-link--white"
+                                >Products</a
+                            >
                         </li>
                         <li class="header__nav-item">
-                            <a href="./about.html" class="header__nav-link">About Us</a>
+                            <a href="./about.html" class="header__nav-link header__nav-link--white"
+                                >About Us</a
+                            >
                         </li>
                         <li class="header__nav-item">
-                            <a href="./blog.html" class="header__nav-link">Blog</a>
+                            <a href="./blog.html" class="header__nav-link header__nav-link--white"
+                                >Blog</a
+                            >
                         </li>
                         <li class="header__nav-item">
-                            <a href="./contact.html" class="header__nav-link">Contact Us</a>
+                            <a
+                                href="./contact.html"
+                                class="header__nav-link header__nav-link--white"
+                                >Contact Us</a
+                            >
                         </li>
                     </ul>
                 </nav>
 
                 <div class="header__cart">
                     <button class="header__cart-btn">
-                        <span class="cart-icon__dot cart-icon__dot--black"></span>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-icon__dot"></span>
+                        <i class="fa-solid fa-cart-shopping fa-cart-shopping--white"></i>
                     </button>
                 </div>
 
                 <button class="header__nav-btn" aria-label="Toggle Navigation">
-                    <i class="fa-solid fa-bars fa-bars--black"></i>
+                    <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
 
@@ -87,240 +104,135 @@
             </div>
         </header>
         <main>
-            <div class="sec-1">
-                <section class="hero">
-                    <div class="hero__container">
+            <section class="products__hero" id="products__hero-bg">
+                <div class="products__hero-container">
+                    <div class="products__hero-content">
                         <h1
-                            class="hero__title"
+                            class="products__hero-title"
                             data-aos="fade-up"
-                            data-aos-duration="2000"
+                            data-aos-duration="1500"
                             data-aos-easing="ease-in-out-quart"
                             data-aos-delay="5000"
                         >
-                            Sneakr <br />
-                            Shoes.
+                            Products
                         </h1>
 
                         <p
-                            class="hero__description"
+                            class="product__hero-description"
                             data-aos="fade-down"
-                            data-aos-duration="2000"
+                            data-aos-duration="1500"
                             data-aos-easing="ease-in-out-quart"
                         >
-                            Step into a world of style and comfort with Sneakr. Discover our curated
-                            collection of trendy sneakers designed for every step you take. Whether
-                            you're hitting the streets or chasing your dreams, our shoes offer the
-                            perfect blend of fashion, function, and flair. It's time to elevate your
-                            look—one step at a time.
+                            Unlock the Future of Fashion—Discover Techwear Today and Elevate Your
+                            Wardrobe with Cutting-Edge Apparel Designed for Tomorrow’s World.
                         </p>
                     </div>
-                </section>
-            </div>
-            <section class="products">
-                <div
-                    class="products__container"
-                    data-aos="fade-down"
-                    data-aos-duration="700"
-                    data-aos-easing="ease-in-out-quart"
-                >
-                    <div class="products__bestseller">
-                        <h2 class="products__title">Our Bestsellers</h2>
-                        <a href="./shop.html" class="products__more-link"
-                            >More <i class="fa-solid fa-arrow-right"></i
-                        ></a>
-                    </div>
-
-                    <hr />
-
-                    <div class="prodcuts__content">
-                        <ul class="products__list">
-                            <li class="products__item skeleton-card">
-                                <div class="skeleton skeleton-img"></div>
-
-                                <div class="skeleton-text-wrap">
-                                    <div class="skeleton skeleton-text"></div>
-                                    <div class="skeleton skeleton-price"></div>
-                                </div>
-                            </li>
-                            <li class="products__item skeleton-card">
-                                <div class="skeleton skeleton-img"></div>
-
-                                <div class="skeleton-text-wrap">
-                                    <div class="skeleton skeleton-text"></div>
-                                    <div class="skeleton skeleton-price"></div>
-                                </div>
-                            </li>
-                            <li class="products__item skeleton-card">
-                                <div class="skeleton skeleton-img"></div>
-
-                                <div class="skeleton-text-wrap">
-                                    <div class="skeleton skeleton-text"></div>
-                                    <div class="skeleton skeleton-price"></div>
-                                </div>
-                            </li>
-                            <li class="products__item skeleton-card">
-                                <div class="skeleton skeleton-img"></div>
-
-                                <div class="skeleton-text-wrap">
-                                    <div class="skeleton skeleton-text"></div>
-                                    <div class="skeleton skeleton-price"></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </section>
-            <section class="category">
-                <div class="category__container">
-                    <div class="category__card">
-                        <a
-                            href="./men.html"
-                            class="category__link category__link--men"
-                            data-value="men"
-                        >
-                            <div
-                                class="category__content"
-                                data-aos="fade-up"
-                                data-aos-easing="ease-in-out-quart"
-                                data-aos-duration="800"
-                            >
-                                <h2 class="category__title">for <br />/men</h2>
-                                <button class="category__more-btn">
-                                    More <i class="fa-solid fa-arrow-right"></i>
+            <section class="products__showcase">
+                <div class="products__showcase-container">
+                    <div class="products__filter">
+                        <div class="products__filter-search">
+                            <form action="" class="products__search">
+                                <div class="products__input-wrap">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <input
+                                        type="text"
+                                        class="products__search-input"
+                                        placeholder="Search..."
+                                    />
+                                </div>
+                                <button type="submit" class="products__search-button">
+                                    Search
                                 </button>
+                            </form>
+                        </div>
+
+                        <div class="prodcuts__filter-option">
+                            <div class="product__filter-dropdown">
+                                <div class="products__custom-trigger">All Products</div>
+                                <div class="products__options">
+                                    <span
+                                        class="products__option prodcuts__option--selected"
+                                        data-value="shopall"
+                                        >Shop All</span
+                                    >
+                                    <span class="products__option" data-value="men">Men</span>
+                                    <span class="products__option" data-value="women">Women</span>
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                    <div class="category__card">
-                        <a href="./women.html" class="category__link category__link--women">
-                            <div
-                                class="category__content"
-                                data-aos="fade-up"
-                                data-aos-duration="800"
-                                data-aos-easing="ease-in-out-quart"
-                            >
-                                <h2 class="category__title">for <br />/women</h2>
-                                <button class="category__more-btn">
-                                    More <i class="fa-solid fa-arrow-right"></i>
-                                </button>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section>
-            <section class="about">
-                <div class="about__container">
-                    <div class="about__header">
-                        <div
-                            class="about__header-content"
-                            data-aos="fade-right"
-                            data-aos-duration="1000"
-                            data-aos-easing="ease-in-out-quart"
-                        >
-                            <h2 class="about__title">
-                                Why <br />
-                                Choose us ?
-                            </h2>
-                            <a href="#" class="about__link"
-                                >About Us <i class="fa-solid fa-arrow-right"></i
-                            ></a>
                         </div>
                     </div>
 
-                    <div class="about__qa">
-                        <ul class="about__qa-list">
-                            <li
-                                class="about__list-item"
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                                data-aos-easing="ease-in-out-quart"
-                            >
-                                <h3 class="about__question">Why should I choose Sneakr?</h3>
-                                <p class="about__answer">
-                                    Sneakr offers premium quality sneakers designed for comfort,
-                                    durability, and style, with a focus on customer satisfaction.
-                                </p>
-                            </li>
+                    <div class="products__card-wrapper">
+                        <ul class="products__item-list">
+                            <li class="products__item skeleton-card">
+                                <div class="skeleton skeleton-img"></div>
 
-                            <li
-                                class="about__list-item"
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                                data-aos-easing="ease-in-out-quart"
-                            >
-                                <h3 class="about__question">Do you offer free shipping?</h3>
-                                <p class="about__answer">
-                                    Yes, we offer free shipping on all orders over $50 within the
-                                    country. International shipping is available at an additional
-                                    cost.
-                                </p>
+                                <div class="skeleton-text-wrap">
+                                    <div class="skeleton skeleton-text"></div>
+                                    <div class="skeleton skeleton-price"></div>
+                                </div>
                             </li>
+                            <li class="products__item skeleton-card">
+                                <div class="skeleton skeleton-img"></div>
 
-                            <li
-                                class="about__list-item"
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                                data-aos-easing="ease-in-out-quart"
-                            >
-                                <h3 class="about__question">
-                                    What sizes are available for your shoes?
-                                </h3>
-                                <p class="about__answer">
-                                    Our sneakers are available in sizes ranging from 5 to 12, with
-                                    options for both men and women. Check our size chart for more
-                                    details.
-                                </p>
+                                <div class="skeleton-text-wrap">
+                                    <div class="skeleton skeleton-text"></div>
+                                    <div class="skeleton skeleton-price"></div>
+                                </div>
                             </li>
+                            <li class="products__item skeleton-card">
+                                <div class="skeleton skeleton-img"></div>
 
-                            <li
-                                class="about__list-item"
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                                data-aos-easing="ease-in-out-quart"
-                            >
-                                <h3 class="about__question">How can I track my order?</h3>
-                                <p class="about__answer">
-                                    Once your order is shipped, you will receive an email with a
-                                    tracking link. You can track the status of your order anytime
-                                    using that link.
-                                </p>
+                                <div class="skeleton-text-wrap">
+                                    <div class="skeleton skeleton-text"></div>
+                                    <div class="skeleton skeleton-price"></div>
+                                </div>
                             </li>
+                            <li class="products__item skeleton-card">
+                                <div class="skeleton skeleton-img"></div>
 
-                            <li
-                                class="about__list-item"
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                                data-aos-easing="ease-in-out-quart"
-                            >
-                                <h3 class="about__question">What is your return policy?</h3>
-                                <p class="about__answer">
-                                    We offer a 30-day return policy on unworn shoes. If you’re not
-                                    satisfied with your purchase, you can return the product for a
-                                    full refund or exchange.
-                                </p>
+                                <div class="skeleton-text-wrap">
+                                    <div class="skeleton skeleton-text"></div>
+                                    <div class="skeleton skeleton-price"></div>
+                                </div>
+                            </li>
+                            <li class="products__item skeleton-card">
+                                <div class="skeleton skeleton-img"></div>
+
+                                <div class="skeleton-text-wrap">
+                                    <div class="skeleton skeleton-text"></div>
+                                    <div class="skeleton skeleton-price"></div>
+                                </div>
+                            </li>
+                            <li class="products__item skeleton-card">
+                                <div class="skeleton skeleton-img"></div>
+
+                                <div class="skeleton-text-wrap">
+                                    <div class="skeleton skeleton-text"></div>
+                                    <div class="skeleton skeleton-price"></div>
+                                </div>
                             </li>
                         </ul>
+
+                        <div class="products__pagination">
+                            <button class="products__pagination-prevbtn">Prev</button>
+
+                            <button class="products__pagination-nextbtn">Next</button>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="cta">
-                <div
-                    class="cta__container"
-                    data-aos="zoom-in-up"
-                    data-aos-duration="1000"
-                    data-aos-offset="200"
-                    data-aos-easing="ease-in-out-sine"
-                ></div>
-            </section>
+
             <section class="newsletter">
                 <div class="newsletter__container">
                     <div class="newsletter__details">
                         <h2
                             class="newsletter__title"
                             data-aos="fade-right"
-                            data-aos-offset="300"
                             data-aos-easing="ease-in-sine"
-                            data-aos-duration="1500"
+                            data-aos-duration="1000"
                         >
                             Cnct._ <br />
                             with us
@@ -366,7 +278,7 @@
                         class="gallery__wrap"
                         data-aos="fade-up"
                         data-aos-easing="ease-in-out-cubic"
-                        data-aos-duration="1500"
+                        data-aos-duration="1000"
                     >
                         <div class="gallery__img">
                             <img
@@ -415,7 +327,7 @@
                             <a href="./shop.html" class="footer__shop-link">Products</a>
                         </li>
                         <li class="footer__shop-items">
-                            <a href="./index.html" class="footer__shop-link">Why Us</a>
+                            <a href="#" class="footer__shop-link">Why Us</a>
                         </li>
                         <li class="footer__shop-items">
                             <a href="./blog.html" class="footer__shop-link">Blog</a>
