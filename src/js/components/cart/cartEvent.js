@@ -25,7 +25,7 @@ function handleAddToCart(addToCatBtn, e) {
         const productElement = e.target.closest(".product");
         const quantityInput = productElement.querySelector("#quantity");
 
-        if (parseInt(quantityInput.value) === 0) {
+        if (parseInt(quantityInput.value) <= 0) {
             return;
         }
 
