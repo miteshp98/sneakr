@@ -24,7 +24,7 @@ Sneakr is a modern e-commerce website built using HTML, CSS, JavaScript, and opt
 
 ### Storage & State Management
 
--   localStorage (to persist cart data)
+-   SessionStorage (to persist cart data)
 -   Environment variables for API keys
 
 ## Features Implemented
@@ -33,7 +33,7 @@ Sneakr is a modern e-commerce website built using HTML, CSS, JavaScript, and opt
 
 -   Add/remove items
 -   Update quantity
--   Store cart in localStorage
+-   Store cart in SessionStorage
 
 #### 📦 Product Pages
 
