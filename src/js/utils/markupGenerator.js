@@ -67,7 +67,7 @@ export function productCard(
                             />
 
                         <button class="producst__shop-btn">
-                            <img src="src/assets/icons/parcel.png" alt="parcel" />
+                            <img src="../../assets/icons/parcel.png" alt="parcel" />
                             <span>Shop Now</span>
                         </button>
                     </div>
