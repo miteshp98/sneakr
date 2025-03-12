@@ -67,7 +67,7 @@ export function productCard(
                             />
 
                         <button class="producst__shop-btn">
-                            <img src="../../assets/icons/parcel.png" alt="parcel" />
+                            <i class="fa-solid fa-bag-shopping"></i>
                             <span>Shop Now</span>
                         </button>
                     </div>
@@ -203,11 +203,12 @@ export function productViewHtml(
                         </div>
 
                         <div class="product-view__actions">
-                            <div class="product-view__quantity">
+                                <div class="product-view__quantity">
                                 <label for="quantity">Quantity</label>
                                 <input type="number" name="quantity" id="quantity" value="1" min="1"/>
-                            </div>
-                            <button class="product-view__cart-btn add-to-cart-btn">Add To Cart</button>
+                                </div>
+                                <button class="product-view__cart-btn add-to-cart-btn" type="submit">Add To Cart</button>
+      
                         </div>
                     </div>
         </div>
