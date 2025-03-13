@@ -83,6 +83,9 @@
 
 .header__cart-btn {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cart-icon__dot {
@@ -91,13 +94,13 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    right: 2px;
-    top: 3px;
+    right: -2px;
+    top: 0px;
     display: none;
 }
 
 .cart-icon__dot--black {
-    background-color: black;
+    background-color: black !important;
 }
 
 .cart-icon__dot--active {
@@ -155,6 +158,11 @@
 
     .header__nav-btn {
         display: none;
+    }
+
+    .cart-icon__dot {
+        right: 3px;
+        top: 3px;
     }
 }
 

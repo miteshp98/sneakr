@@ -17,8 +17,6 @@
     opacity: 1;
 }
 
-
-
 .cart__container {
     display: flex;
     flex-direction: column;
@@ -46,6 +44,10 @@
     height: 42px;
     font-size: 1.2rem;
     cursor: pointer;
+
+    .fa-x {
+        color: black;
+    }
 }
 
 .cart__items {
@@ -152,6 +154,7 @@
         background-color: transparent;
         height: 40px;
         font-size: 0.9rem;
+        color: black;
 
         cursor: pointer;
         transition: all 0.3s linear;

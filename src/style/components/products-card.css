@@ -82,10 +82,7 @@
     cursor: pointer;
     opacity: 0;
     font-weight: 500;
-
-    img {
-        width: 18px;
-    }
+    color: black;
 
     &:hover {
         width: 170px;
@@ -94,6 +91,7 @@
     }
 
     span {
+        color: black;
         font-size: 0.95rem;
     }
 }
