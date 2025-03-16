@@ -6,6 +6,7 @@
 .productview__container {
     max-width: var(--CON-WIDTH);
     margin: 0 auto;
+    min-height: 90vh;
 }
 
 .product-view__image {
@@ -105,7 +106,6 @@
 
 .add-to-cart-btn--disabled {
     pointer-events: none;
-    
 }
 
 @media screen and (min-width: 990px) {
